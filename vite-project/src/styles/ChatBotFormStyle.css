@@ -1,0 +1,70 @@
+.dialogue-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 25vw;
+    height: 50vh;
+    border-radius: 1vh;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-bottom: 1vh;
+    margin-right: 1vh;
+}
+
+.user-message {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    margin-bottom: 5vh;
+    border-radius: 2vh;
+}
+
+.bot-message {
+    background-color: #e6e6e6;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 2vh;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    max-height: 30vh;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 2vh;
+}
+
+.message-input {
+    flex: 1;
+    padding: 5px;
+    white-space: break-spaces;
+    text-overflow: clip;
+    margin-left: 10px;
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 2vh;
+    border-radius: 1vh;
+}
+
+.send-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 2vh;
+}
+
+@media (max-width: 768px) {
+    .chatDialog {
+        width: 100%;
+        height: 50vh;
+    }
+}
