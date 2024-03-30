@@ -21,7 +21,8 @@ const ChatBotComponent = () => {
     const handleQuestionSubmit = () => {
         // Здесь можно добавить логику для получения ответа на вопрос пользователя
         // Например, можно использовать API для обработки запроса к чатботу
-        setAnswer(`Ответ на вопрос "${question}"`);
+        setAnswer(`Ответ на вопрос "${question}"`)
+            .then(setQuestion(''));
     };
 
     return (
