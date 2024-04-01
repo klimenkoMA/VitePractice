@@ -2,20 +2,25 @@ import React from 'react';
 
 const UseAlert = () => {
 
-    let admin;
-    let name = "John";
-
-    admin = name;
-
     const handlePressButton = () => {
-        alert("Hello JavaScript!");
-        alert(admin);
-        
-        let name = "Ilya";
-        alert(`hello, ${1}`);
-        alert(`hello, ${"name"}`);
-        alert(`hello, ${name}`);
 
+        let auth = prompt("Кто там?", '');
+
+        if (auth === "Админ") {
+            let pass = prompt("Введите пароль", '');
+
+            if (pass === "Я Главный") {
+                alert("Здравствуйте");
+            } else if (pass === '' || pass === null) {
+                alert("Отменено");
+            } else {
+                alert("Неверный пароль");
+            }
+        } else if (auth === '' || auth === null) {
+            alert("Отменено");
+        } else {
+            alert("Я вас не знаю");
+        }
     };
 
     return (

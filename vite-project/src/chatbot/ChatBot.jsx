@@ -4,32 +4,36 @@ import "../styles/ChatBotFormStyle.css";
 const ChatBotComponent = () => {
     const [question, setQuestion] = useState('');
     const [answer, setAnswer] = useState('');
-    const [inputValue, setInputValue] = useState('');
+    let quest;
 
     const handleSubmit = (e) => {
+
         e.preventDefault();
         // Действия по обработке данных из поля ввода
+        setTimeout("10000");
 
         // Очистка поля ввода
-        setInputValue('');
+        setQuestion('');
     };
 
     const handleQuestionChange = (e) => {
-        setQuestion(e.target.value);
+        quest = e.target.value;
+        setQuestion(quest);
     };
 
     const handleQuestionSubmit = () => {
         // Здесь можно добавить логику для получения ответа на вопрос пользователя
         // Например, можно использовать API для обработки запроса к чатботу
-        setAnswer(`Ответ на вопрос "${question}"`)
-            .then(setQuestion(''));
+        setAnswer(`Ответ на вопрос "${question}"`);
     };
 
     return (
         <div className="dialogue-container">
             <h4>Информационная система</h4>
             <div className="bot-message">{answer}</div>
-            <div className="message-form">
+            <div className="message-form"
+            // onSubmit={handleSubmit}
+            >
                 <input
                     className="message-input"
                     type="text"
