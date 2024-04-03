@@ -34,6 +34,7 @@
     position: fixed;
     margin-bottom: 2vh;
     border-radius: 1vh;
+    text-align: right;
 }
 
 .send-button {

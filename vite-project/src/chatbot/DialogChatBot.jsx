@@ -9,7 +9,9 @@ const ChatBotDialog = () => {
     };
 
     const handleSendMessage = () => {
-        addMessage(`Вы: ${inputMessage}`);
+        addMessage(
+            `Вы: ${inputMessage}`
+        );
         setInputMessage('');
         // Добавить здесь логику для обработки введенного пользователем сообщения и получения ответа от чатбота
     };
@@ -27,11 +29,13 @@ const ChatBotDialog = () => {
                 className='message-form'
             >
                 {messages.map((message, index) => (
-                    <div
-
-                        key={index}>
-                        {message}
-                    </div>
+                        <div
+                            style={{
+                                textAlign: message.slice(0,3) === `Вы:`?`right`: `left`
+                            }}
+                            key={index}>
+                            {message}
+                        </div>
                 ))}
             </div>
             <input
@@ -39,7 +43,12 @@ const ChatBotDialog = () => {
                 type="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-            />
+                onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                        // Здесь можно добавить обработчик для отправки данных
+                        handleSendMessage()
+                    }}}
+                    />
             <button
                 className='send-button'
                 onClick={handleSendMessage}>Отправить
