@@ -10,13 +10,16 @@ function App() {
     const [count, setCount] = useState(0)
 
     return (
-        <>
-            <div
-                style={{
-                    width: `100%`,
-                    backgroundImage: `url(/backFon.jpg)`,
-                }}
-            >
+        <div
+            style={{
+                width: `100%`,
+                background: `url(/backFon.jpg)`,
+                backgroundSize: `100% 100%`,
+                backgroundRepeat: `no-repeat`,
+                height:`max`
+            }}
+        >
+            <div>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo"/>
                 </a>
@@ -39,7 +42,7 @@ function App() {
                 Click on the Vite and React logos to learn more
                 <UseAlert/>
             </p>
-        </>
+        </div>
     )
 }
 
