@@ -3,7 +3,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import "./styles/ChatBotFormStyle.css";
 import UseAlert from "./practice/JsPractice";
-import ChatBotDialogButton from "./chatbot/ChatButton";
+import ChatBotDialogButton from "./chatbot/buttons/ChatButton";
 
 function App() {
 
@@ -24,8 +24,7 @@ function App() {
             >Vite + React</h1>
             <div
             style={{
-                alignSelf: "end",
-                right: 0,
+               marginLeft: `85%`
             }}
             >
                 <ChatBotDialogButton/>

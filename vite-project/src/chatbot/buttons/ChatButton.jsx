@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ChatBotDialog from './DialogChatBot';
+import ChatBotDialog from '../DialogChatBot';
 
 const ChatBotDialogButton = () => {
     const [isOpen, setIsOpen] = useState(false); // Статус открытого диалога

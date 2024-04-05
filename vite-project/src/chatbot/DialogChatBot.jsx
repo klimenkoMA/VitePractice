@@ -1,8 +1,14 @@
 import React, {useState, useEffect} from 'react';
+import CloseButton from "./buttons/CloseButton";
 
 const ChatBotDialog = () => {
     const [messages, setMessages] = useState([]);
     const [inputMessage, setInputMessage] = useState('');
+    const [isOpen, setIsOpen] = useState(true);
+
+    const handleClose = () => {
+        setIsOpen(false);
+    };
 
     const addMessage = (message) => {
         setMessages([...messages, message]);
@@ -22,20 +28,37 @@ const ChatBotDialog = () => {
         addMessage(newMessage);
     }, []);
 
-    return (
+    return isOpen ? (
         <div className='dialogue-container'>
-            <h3>Система знаний</h3>
+            <div
+                style={{
+                    flexDirection: `row`
+                }}
+            >
+                <div
+                    style={{
+                        display: `flex`,
+                        alignItems: `flex-end`
+                    }}
+                >
+                    <h3>Система знаний </h3>
+                    <div>
+                        <CloseButton onClick={handleClose}/>
+                    </div>
+                </div>
+
+            </div>
             <div
                 className='message-form'
             >
                 {messages.map((message, index) => (
-                        <div
-                            style={{
-                                textAlign: message.slice(0,3) === `Вы:`?`right`: `left`
-                            }}
-                            key={index}>
-                            {message}
-                        </div>
+                    <div
+                        style={{
+                            textAlign: message.slice(0, 3) === `Вы:` ? `right` : `left`
+                        }}
+                        key={index}>
+                        {message}
+                    </div>
                 ))}
             </div>
             <input
@@ -47,14 +70,15 @@ const ChatBotDialog = () => {
                     if (e.key === 'Enter') {
                         // Здесь можно добавить обработчик для отправки данных
                         handleSendMessage()
-                    }}}
-                    />
+                    }
+                }}
+            />
             <button
                 className='send-button'
                 onClick={handleSendMessage}>Отправить
             </button>
         </div>
-    );
+    ) : null;
 };
 
 export default ChatBotDialog;
