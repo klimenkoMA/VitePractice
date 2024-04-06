@@ -5,7 +5,7 @@ const CloseButton = ({onClick}) => {
     return (
             <button
                 style={{
-                    marginLeft: `85%`
+                    marginLeft: `89%`
                 }}
                 onClick={onClick}>
                 <svg
