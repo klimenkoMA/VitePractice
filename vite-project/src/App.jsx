@@ -4,6 +4,7 @@ import './App.css'
 import "./styles/ChatBotFormStyle.css";
 import UseAlert from "./practice/JsPractice";
 import ChatBotDialogButton from "./chatbot/buttons/ChatButton";
+import UseTensorFlow from "./chatbot/tensorflow/TensorFlowComponent";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
 
             <p className="read-the-docs">
                 <UseAlert/>
+                <UseTensorFlow/>
             </p>
         </div>
     )
