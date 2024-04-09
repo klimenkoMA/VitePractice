@@ -1,0 +1,44 @@
+<!--<!DOCTYPE html>-->
+
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <title>Learning ml5.js</title>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>-->
+<!--    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script type='text/javascript'>-->
+<!--			// Переменная в которой будет наш класификатор изображений-->
+<!--let classifier;-->
+
+<!--// А здесь уже будет размещаться само наше изображение-->
+<!--let img;-->
+
+<!--// Preload функция где мы загружаем нейронную сеть MobileNet в-->
+<!--// classifier, и загружаем изображение в img-->
+<!--function preload() {-->
+<!--classifier = ml5.imageClassifier('MobileNet');-->
+<!--	img = loadImage("public/vite.svg");-->
+<!--}-->
+
+<!--// С помощью функции createCanvas - создаем поле где нейронная сеть-->
+<!--// будет распозанавать изображение-->
+<!--function setup() {-->
+<!--  createCanvas(400, 400);-->
+<!--  classifier.classify(img, gotResult); // Делаем класификацию изображения-->
+<!--  image(img, 0, 0);-->
+<!--}-->
+
+<!--// А здесь делаем вывод результата-->
+<!--function gotResult(error, results) {-->
+<!--  if (error) {-->
+<!--    console.error(error); // В случае ошибки - выводим её-->
+<!--  } else {-->
+<!--    console.log(results); // В случае успешного результата выводим на страницу-->
+<!--    createDiv('Label:' + results[0].label);-->
+<!--    createDiv('Confidence:' + nf(results[0].confidence, 0, 2));-->
+<!--  }-->
+<!--}-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
