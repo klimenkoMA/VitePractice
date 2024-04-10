@@ -4,6 +4,7 @@ import './App.css'
 import "./styles/ChatBotFormStyle.css";
 import UseAlert from "./practice/JsPractice";
 import ChatBotDialogButton from "./chatbot/buttons/ChatButton";
+import DialogWithChatBotComponent from "./chatbot/DialogComponent";
 
 
 function App() {
@@ -33,7 +34,9 @@ function App() {
 
             <div className="read-the-docs">
                 <UseAlert/>
-                {/*<UseTensorFlow/>*/}
+                <DialogWithChatBotComponent/>
+                {/*<<UseTensorFlow/>*/}
+                {/*<ModelConverter/>*/}
             </div>
         </div>
     )

@@ -3,3 +3,92 @@
 https://learn.javascript.ru/focus-blur
 
 npm install @tensorflow/tfjs-node-gpu
+
+
+Вот пример того, как можно создать компонент диалога пользователя с использованием Dialogflow в React.js:
+
+    Установите библиотеку axios для отправки запросов на сервис Dialogflow:
+
+
+npm install axios
+
+    Создайте компонент DialogflowChat.js:
+
+
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const DialogflowChat = () => {
+  const [messages, setMessages] = useState([]);
+  const [inputMessage, setInputMessage] = useState('');
+
+  const sendMessage = async () => {
+    const response = await axios.post('https://dialogflow.googleapis.com/v2/projects/PROJECT_ID/agent/sessions/SESSION_ID:detectIntent', {
+      queryInput: {
+        text: {
+          text: inputMessage,
+          languageCode: 'en-US'
+        }
+      }
+    }, {
+      headers: {
+        Authorization: 'Bearer ACCESS_TOKEN'
+      }
+    });
+
+    const newMessage = {
+      text: response.data.queryResult.fulfillmentText,
+      isUser: false
+    };
+    setMessages([...messages, newMessage]);
+    setInputMessage('');
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      sendMessage();
+    }
+  };
+
+  return (
+    <div>
+      <div>
+        {messages.map((message, index) => (
+          <div key={index} style={{ textAlign: message.isUser ? 'right' : 'left' }}>
+            {message.text}
+          </div>
+        ))}
+      </div>
+      <input
+        type="text"
+        value={inputMessage}
+        onChange={(e) => setInputMessage(e.target.value)}
+        onKeyPress={handleKeyPress}
+      />
+      <button onClick={sendMessage}>Send</button>
+    </div>
+  );
+};
+
+export default DialogflowChat;
+
+    Замените PROJECT_ID, SESSION_ID и ACCESS_TOKEN на соответствующие значения вашего проекта Dialogflow.
+
+    Используйте компонент DialogflowChat в своем приложении:
+
+
+import React from 'react';
+import DialogflowChat from './DialogflowChat';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Dialogflow Chat</h1>
+      <DialogflowChat />
+    </div>
+  );
+};
+
+export default App;
+
+Теперь у вас есть компонент диалога пользователя, который отправляет запросы на сервис Dialogflow и отображает ответы.
