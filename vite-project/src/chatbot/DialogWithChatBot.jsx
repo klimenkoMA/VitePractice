@@ -1,5 +1,5 @@
 import * as tf from '@tensorflow/tfjs';
-import model from './gemma-2b-it-gpu-int4.bin'; // Путь к файлу с преобученной моделью
+import model from './model.json'; // Путь к файлу с преобученной моделью
 
 
 const answerQuestion = async (question) => {
@@ -9,9 +9,9 @@ const answerQuestion = async (question) => {
         // Применение преобученной модели к вопросу
         const output = model.predict(input);
 
-        const answer = await output.data(); // Получение ответа на вопрос
 
-        return answer;
+         // Получение ответа на вопрос
+        return await output.data();
     } catch (e) {
         console.log(e.message);
     }
