@@ -2,31 +2,19 @@ import React from 'react';
 
 const UseAlert = () => {
 
-    const handlePressButton = () => {
-
-        let auth = prompt("Кто там?", '');
-
-        if (auth === "Админ") {
-            let pass = prompt("Введите пароль", '');
-
-            if (pass === "Я Главный") {
-                alert("Здравствуйте");
-            } else if (pass === '' || pass === null) {
-                alert("Отменено");
-            } else {
-                alert("Неверный пароль");
-            }
-        } else if (auth === '' || auth === null) {
-            alert("Отменено");
-        } else {
-            alert("Я вас не знаю");
-        }
-    };
+  const ask = (question, yes, no) => {
+      if (confirm('Вы согласны?')){
+          return yes;
+      }else{
+          return no;
+      }
+  }
 
     return (
         <div>
             <button
-                onClick={handlePressButton}>
+                onClick={ask("1", true, false) ? () => alert('Вы согласились.')
+                    : () => alert('Вы отменили выполнение.')}>
                 ALERT
             </button>
         </div>
