@@ -33,8 +33,8 @@ function App() {
             </div>
 
             <div className="read-the-docs">
-                <UseAlert/>
-                <DialogflowChat/>
+                {/*<UseAlert/>*/}
+                {/*<DialogflowChat/>*/}
                 {/*<DialogWithChatBotComponent/>*/}
                 {/*<<UseTensorFlow/>*/}
                 {/*<ModelConverter/>*/}
