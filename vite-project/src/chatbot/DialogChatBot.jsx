@@ -30,27 +30,17 @@ const ChatBotDialog = () => {
 
     return isOpen ? (
         <div className='dialogue-container'>
-            <div
-                style={{
-                    flexDirection: `row`
-                }}
-            >
-                <div
-                    style={{
-                        display: `flex`,
-                        alignItems: `flex-end`
-                    }}
-                >
-                    <h3>Система знаний </h3>
-                    <div>
+            <div className="header-box">
+                <div className="header-box-title">
+                    <div className="header-box-title-name">
+                        <h4>Система знаний </h4>
+                    </div>
+                    <div className="header-box-title-close">
                         <CloseButton onClick={handleClose}/>
                     </div>
                 </div>
-
             </div>
-            <div
-                className='message-form'
-            >
+            <div className='message-form'>
                 {messages.map((message, index) => (
                     <div
                         style={{

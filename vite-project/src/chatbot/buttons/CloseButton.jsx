@@ -1,19 +1,18 @@
 import React from 'react';
+import "/src/styles/ChatBotFormStyle.css";
 
 const CloseButton = ({onClick}) => {
 
     return (
             <button
-                style={{
-                    marginLeft: `89%`
-                }}
+                className="close-button"
                 onClick={onClick}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    width="8"
-                    height="8"
+                    width="10"
+                    height="10"
                 >
                     <path
                         fillRule="evenodd"

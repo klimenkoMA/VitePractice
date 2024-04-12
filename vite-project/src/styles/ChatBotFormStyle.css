@@ -1,4 +1,6 @@
 .dialogue-container {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -6,31 +8,69 @@
     height: 50vh;
     border-radius: 1vh;
     background: #f0f0f0;
-    border: 1px solid #ccc;
+    border: 1vh solid #3498db;
     margin-bottom: 1vh;
     margin-right: 1vh;
 }
 
-.message-form {
+.header-box{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:5%;
+}
+
+.header-box-title{
+    display: flex;
     flex: 1;
-    margin-top: 1vh;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header-box-title-name {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: start;
+    color: #0d318f;
+}
+
+.header-box-title-close {
+    display: flex;
+    padding-top: 1vh;
+    padding-right: 1vh;
+}
+
+.close-button {
+    display: flex;
+    background: inherit;
+    border: 0;
+    color: #0d318f;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 10vh;
     margin-bottom: 2vh;
     padding-right: 3vh;
     padding-left: 3vh;
+    padding-bottom: 2vh;
     max-height: 30vh;
     overflow-y: scroll;
     text-align: left;
 }
 
 .message-input {
+    display: flex;
     flex: 1;
     padding: 1vh 3vh;
     max-width: 21vh;
     white-space: break-spaces;
     text-overflow: clip;
     margin-left: 4vh;
-    bottom: 0;
-    right: 26vh ;
+    bottom: 2vh;
     position: fixed;
     margin-bottom: 2vh;
     border-radius: 1vh;
@@ -38,17 +78,18 @@
 }
 
 .send-button {
+    display: flex;
     background-color: #3498db;
     color: #fff;
     padding: 1vh 3vh;
     border: none;
     border-radius: 1vh;
+    max-width: 5vh;
     cursor: pointer;
     margin-left: 5vh;
     margin-right: 4vh;
-    right: 0;
-    bottom: 0;
-    position: fixed;
+    right: 2vh;
+    bottom: 2vh;
     margin-bottom: 2vh;
 }
 
@@ -56,5 +97,17 @@
     .chatDialog {
         width: 100%;
         height: 50vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dialogue-container {
+        background-color: pink;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .dialogue-container {
+        background-color: darkgray;
     }
 }
