@@ -4,6 +4,8 @@ https://learn.javascript.ru/focus-blur
 
 npm install @tensorflow/tfjs-node-gpu
 
+npm install react-bootstrap bootstrap
+
 
 Вот пример того, как можно создать компонент диалога пользователя с использованием Dialogflow в React.js:
 
