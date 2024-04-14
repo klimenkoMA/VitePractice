@@ -1,0 +1,230 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="ru">-->
+<!--  <head>-->
+<!--    <meta charset="UTF-8" />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--    <title>Yandex summer school 2024</title>-->
+<!--  </head>-->
+<!--  <style>-->
+<!--    :root {-->
+<!--      &#45;&#45;bg-primary: #fbfbfb;-->
+<!--      &#45;&#45;bg-secondary: #fff;-->
+<!--      &#45;&#45;control-primary: #fdde55;-->
+<!--      &#45;&#45;color-primary: #000;-->
+<!--      &#45;&#45;depot-color-stroke: rgba(7, 28, 71, 0.12);-->
+<!--    }-->
+
+<!--    @media (prefers-color-scheme: dark) {-->
+<!--      :root {-->
+<!--        &#45;&#45;bg-primary: #111112;-->
+<!--        &#45;&#45;bg-secondary: #18181a;-->
+<!--        &#45;&#45;color-primary: #fff;-->
+<!--        &#45;&#45;depot-color-stroke: rgba(255, 255, 255, 0.12);-->
+<!--      }-->
+<!--    }-->
+
+<!--    body {-->
+<!--      background-color: var(&#45;&#45;bg-primary);-->
+<!--      font-family: Helvetica, Arial, sans-serif;-->
+<!--    }-->
+
+<!--    header {-->
+<!--      box-shadow: 0 1px var(&#45;&#45;depot-color-stroke);-->
+<!--      margin-block-end: 12px;-->
+<!--      padding-block-end: 8px;-->
+<!--    }-->
+
+<!--    .select-wrapper {-->
+<!--      color: var(&#45;&#45;color-primary);-->
+<!--      margin-block-end: 12px;-->
+<!--      & select {-->
+<!--        min-width: 40px;-->
+<!--        cursor: pointer;-->
+<!--        font-size: 20px;-->
+<!--      }-->
+<!--    }-->
+
+<!--    .search {-->
+<!--      display: flex;-->
+<!--      overflow: hidden;-->
+<!--      flex: 1 1;-->
+<!--      box-sizing: border-box;-->
+<!--      height: 44px;-->
+<!--      border: 2px solid #fc0;-->
+<!--      border: 2px solid var(&#45;&#45;control-primary);-->
+<!--      border-radius: 12px;-->
+<!--      & input {-->
+<!--        flex: 1 1;-->
+<!--        box-sizing: border-box;-->
+<!--        padding-left: 14px;-->
+<!--        font-family: inherit;-->
+<!--        font-size: 16px;-->
+<!--        text-overflow: clip;-->
+<!--        color: var(&#45;&#45;color-primary);-->
+<!--        border: 0;-->
+<!--        outline: 0;-->
+<!--        background: initial;-->
+<!--      }-->
+<!--    }-->
+
+<!--    .card-item {-->
+<!--      padding: 12px 16px;-->
+<!--      border-radius: 16px;-->
+<!--      color: var(&#45;&#45;color-primary);-->
+<!--      background-color: var(&#45;&#45;bg-secondary);-->
+<!--      box-shadow: 0 4px 12px #0d234308;-->
+<!--    }-->
+<!--  </style>-->
+<!--  <style>-->
+<!--    ::highlight(search-results) {-->
+<!--      background-color: orange;-->
+<!--      text-decoration: underline;-->
+<!--    }-->
+
+<!--    .search-results {-->
+<!--      background-color: orange;-->
+<!--      text-decoration: underline;-->
+<!--    }-->
+<!--  </style>-->
+
+<!--  <body>-->
+<!--    <header>-->
+<!--      <div class="select-wrapper">-->
+<!--        <label for="tests-select">Выберите тест</label>-->
+<!--        <select name="tests" id="tests-select"></select>-->
+<!--      </div>-->
+<!--      <form class="search" role="search" aria-label="Поиск">-->
+<!--        <input-->
+<!--          id="site-search"-->
+<!--          type="text"-->
+<!--          autocomplete="off"-->
+<!--          aria-label="Запрос"-->
+<!--        />-->
+<!--      </form>-->
+<!--    </header>-->
+
+<!--    <div id="root" class="card-item"></div>-->
+<!--  </body>-->
+<!--  <script>-->
+<!--    const rootElement = document.getElementById("root");-->
+<!--    const testsSelect = document.getElementById("tests-select");-->
+
+<!--    rootElement.addEventListener("onSolutionReady", (event) => {-->
+<!--      const { detail } = event;-->
+
+<!--      if (detail) {-->
+<!--        testsSelect.innerHTML = detail-->
+<!--          .map((t, index) => `<option value="${t.id}">${index + 1}</option>`)-->
+<!--          .join("");-->
+
+<!--        rootElement.innerHTML = detail[0].content;-->
+
+<!--        testsSelect.addEventListener("change", (e) => {-->
+<!--          const test = detail.find((t) => t.id === e.target.value);-->
+<!--          rootElement.innerHTML = test.content;-->
+<!--        });-->
+<!--      }-->
+<!--    });-->
+<!--  </script>-->
+<!--  <script>-->
+<!--    const onSolutionReady = new CustomEvent("onSolutionReady", {-->
+<!--      bubbles: true,-->
+<!--      cancelable: true,-->
+<!--      composed: false,-->
+<!--      detail: [-->
+<!--        {-->
+<!--          id: "f38d0cca-167c-46dc-9504-69ebe13c1e47",-->
+<!--          comment:-->
+<!--            "One text node. Content contains in the middle of a single tag",-->
+<!--          content: `<p>sit amet, Lorem ipsum. Sed non risus</p>`,-->
+<!--          searchFor: "Lorem ipsum",-->
+<!--        },-->
+<!--        {-->
+<!--          id: "20b81641-b065-492d-801a-e786d2a6894b",-->
+<!--          comment: "One text node. Content contains in the end of a single tag",-->
+<!--          content: `<p>Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, Lorem ipsum</p>`,-->
+<!--          searchFor: "Lorem ipsum",-->
+<!--        },-->
+<!--        {-->
+<!--          id: "c8b707f7-91e9-4778-acc6-4f06849bd323",-->
+<!--          comment: "One text node and content contains in a single tag",-->
+<!--          content: `-->
+<!--              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>-->
+<!--              `,-->
+<!--          searchFor: "Lorem ipsum",-->
+<!--        },-->
+<!--        {-->
+<!--          id: "eb375bed-bf98-4150-b8ac-711a6c0fe33a",-->
+<!--          comment:-->
+<!--            "The two text nodes and content are contained in sibling tags",-->
+<!--          content: `-->
+<!--              <div><p>Lorem </p><p>ipsum</p></div>-->
+<!--              `,-->
+<!--          searchFor: "Lorem ipsum",-->
+<!--        },-->
+<!--      ],-->
+<!--    });-->
+
+<!--    document.getElementById("root").dispatchEvent(onSolutionReady);-->
+<!--  </script>-->
+
+<!--  <script>-->
+<!--    if (!CSS.highlights) {-->
+<!--      document.getElementById("root").innerHTML =-->
+<!--        "CSS Custom Highlight API не поддерживается. <br />Пожалуйста, воспользуйтесь другим браузером. <a href='https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API#browser_compatibility'>Подробнее</a>";-->
+<!--    }-->
+<!--  </script>-->
+
+<!--  <script>-->
+<!--    // Copy paste this script-->
+
+<!--    const root = document.getElementById("root");-->
+<!--    const siteSearch = document.getElementById("site-search");-->
+<!--    const selectTest = document.getElementById("tests-select");-->
+
+<!--    siteSearch.addEventListener("input", highlight);-->
+<!--    selectTest.addEventListener("change", highlight);-->
+
+<!--    function highlight() {-->
+
+<!--        const str = siteSearch.value.trim().toLowerCase();-->
+<!--        if (!str) {-->
+<!--            return;-->
+<!--        }-->
+
+<!--        // Iterate over all text nodes and find matches.-->
+<!--        const ranges = allTextNodes-->
+<!--            .map((el) => {-->
+<!--                return { el, text: el.textContent.toLowerCase() };-->
+<!--            })-->
+<!--            .map(({ text, el }) => {-->
+<!--                const indices = [];-->
+<!--                let startPos = 0;-->
+<!--                while (startPos < text.length) {-->
+<!--                    const index = text.indexOf(str, startPos);-->
+<!--                    if (index === -1) break;-->
+<!--                    indices.push(index);-->
+<!--                    startPos = index + str.length;-->
+<!--                }-->
+
+<!--                // Create a range object for each instance of-->
+<!--                // str we found in the text node.-->
+<!--                return indices.map((index) => {-->
+<!--                    const range = new Range();-->
+<!--                    range.setStart(el, index);-->
+<!--                    range.setEnd(el, index + str.length);-->
+<!--                    return range;-->
+<!--                });-->
+<!--            });-->
+
+<!--        // Create a Highlight object for the ranges.-->
+<!--        const searchResultsHighlight = new Highlight(...ranges.flat());-->
+
+<!--        // Register the Highlight object in the registry.-->
+<!--        CSS.highlights.set("search-results", searchResultsHighlight);-->
+
+<!--    }-->
+
+
+<!--  </script>-->
+<!--</html>-->
