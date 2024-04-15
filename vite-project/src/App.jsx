@@ -5,6 +5,7 @@ import "./styles/ChatBotFormStyle.css";
 import UseAlert from "./practice/JsPractice";
 import ChatBotDialogButton from "./chatbot/buttons/ChatButton";
 import DialogflowChat from "./chatbot/dialogflow/DialogFlowComponent";
+import UsePlotly from "./chatbot/tensorflow/plotly/PlotlyGraph";
 
 
 function App() {
@@ -19,17 +20,17 @@ function App() {
                     <img src={reactLogo} className="logo react" alt="React logo"/>
                 </a>
             </div>
-            <h1
+            <h3
                 style={{
                     color: "white",
                 }}
-            >Vite + React</h1>
+            >Vite + React</h3>
+                <UsePlotly/>
             <div
-            style={{
-               marginLeft: `85%`
-            }}
-            >
-                <ChatBotDialogButton/>
+                style={{
+                    marginLeft: `85%`
+                }}
+            ><ChatBotDialogButton/>
             </div>
 
             <div className="read-the-docs">
