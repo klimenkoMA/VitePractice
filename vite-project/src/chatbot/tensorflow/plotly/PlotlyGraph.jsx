@@ -23,8 +23,8 @@ const UsePlotly = () => {
         let layout = {
             width: 300,
             height: 250,
-            paper_bgcolor: 'rgba(255, 126, 95, 1)',
-            plot_bgcolor: 'rgba(254, 180, 123, 1)'
+            paper_bgcolor: 'rgb(80,160,290, 0)',
+            plot_bgcolor: 'rgba(64, 224, 208, 1)'
     };
 
         Plotly.newPlot('chart', [trace], layout);

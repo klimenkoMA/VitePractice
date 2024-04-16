@@ -51,22 +51,28 @@ const ChatBotDialog = () => {
                     </div>
                 ))}
             </div>
-            <input
-                className='message-input'
-                type="text"
-                value={inputMessage}
-                onChange={(e) => setInputMessage(e.target.value)}
-                onKeyPress={(e) => {
-                    if (e.key === 'Enter') {
-                        // Здесь можно добавить обработчик для отправки данных
-                        handleSendMessage()
-                    }
-                }}
-            />
-            <button
-                className='send-button'
-                onClick={handleSendMessage}>Отправить
-            </button>
+            <div className="input-block">
+                <div className="input-block-message">
+                    <input
+                        className="message-input"
+                        type="text"
+                        value={inputMessage}
+                        onChange={(e) => setInputMessage(e.target.value)}
+                        onKeyPress={(e) => {
+                            if (e.key === 'Enter') {
+                                // Здесь можно добавить обработчик для отправки данных
+                                handleSendMessage()
+                            }
+                        }}
+                    />
+                </div>
+                <div>
+                    <button
+                        className='send-button'
+                        onClick={handleSendMessage}>Отправить
+                    </button>
+                </div>
+            </div>
         </div>
     ) : null;
 };
