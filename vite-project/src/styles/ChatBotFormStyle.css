@@ -8,7 +8,7 @@
     height: 50vh;
     border-radius: 1vh;
     background: #f0f0f0;
-    border: 1vh solid #3498db;
+    border: 0.5vh solid #0d318f;
     margin-bottom: 1vh;
     margin-right: 1vh;
 }
@@ -63,18 +63,13 @@
 .input-block {
     display: flex;
     flex: 1;
-    flex-direction: row;
-    justify-content: space-evenly;
 }
 
 .input-block-message{
-    flex: 1;
-    align-self: flex-start;
-    justify-self: flex-start;
+    padding-left: 3vh;
 }
 
 .message-input {
-    align-self: flex-start;
     padding: 1vh 3vh;
     max-width: 21vh;
     white-space: break-spaces;
@@ -84,19 +79,17 @@
 }
 
 .input-block-button{
-    flex: 4;
+    flex: 3;
     justify-self: flex-end;
 }
 
 .send-button {
-    flex: 2;
-    align-self: flex-end;
     background-color: #3498db;
     color: #fff;
-    padding: 1vh 3vh;
+    padding: 1vh 2vh;
     border: none;
     border-radius: 1vh;
-    max-width: 4vh;
+    max-width: min-content;
     cursor: pointer;
 }
 

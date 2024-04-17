@@ -66,7 +66,7 @@ const ChatBotDialog = () => {
                         }}
                     />
                 </div>
-                <div>
+                <div className="input-block-button">
                     <button
                         className='send-button'
                         onClick={handleSendMessage}>Отправить
