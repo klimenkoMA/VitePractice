@@ -28,7 +28,7 @@ function App() {
                 <UsePlotly/>
             <div
                 style={{
-                    marginLeft: `85%`
+                    marginLeft: `80%`
                 }}
             ><ChatBotDialogButton/>
             </div>
