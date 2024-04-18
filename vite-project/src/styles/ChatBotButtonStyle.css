@@ -63,7 +63,7 @@ button:hover #leftArrow {
     background-color: #2761c3;
     box-shadow: inset 1px 1px 8px #2781c3;
     transform: scale(1.2) rotate(45deg);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 #rightTop {
@@ -94,22 +94,22 @@ button:hover #leftArrow {
 
 button:hover #leftTop {
     animation: 0.1s ease-in-out 0.05s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
+    0.1s linear 0.1s both lightEffect8;
 }
 
 button:hover #rightTop {
     animation: 0.1s ease-in-out 0.15s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
+    0.1s linear 0.1 both lightEffect8;
 }
 
 button:hover #rightBottom {
-    animation: 0.1s ease-in-out 0.25s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
+    animation: 0.1s ease-in-out 0.1s both changeColor8,
+    0.1s linear 0.1s both lightEffect8;
 }
 
 button:hover #leftBottom {
-    animation: 0.1s ease-in-out 0.35s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
+    animation: 0.1s ease-in-out 0.1s both changeColor8,
+    0.1s linear 0.1s both lightEffect8;
 }
 
 button:hover .corner {
@@ -117,7 +117,7 @@ button:hover .corner {
 }
 
 button:hover #clip {
-    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    animation: 0.1s ease-in-out 0.1s both greenLight8;
     --color: #27c39f;
 }
 
@@ -146,7 +146,7 @@ button:hover #clip {
     }
 
     to {
-        box-shadow: inset 0px 0px 32px #27c39f;
+        box-shadow: inset 0 0 32px #27c39f;
     }
 }
 
