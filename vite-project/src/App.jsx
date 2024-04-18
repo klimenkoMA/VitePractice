@@ -26,12 +26,9 @@ function App() {
                 }}
             >Vite + React</h3>
                 <UsePlotly/>
-            <div
-                style={{
-                    marginLeft: `80%`
-                }}
-            ><ChatBotDialogButton/>
-            </div>
+
+                <ChatBotDialogButton/>
+
 
             <div className="read-the-docs">
                 {/*<UseAlert/>*/}

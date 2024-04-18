@@ -1,24 +1,25 @@
 .button {
     position: relative;
-    width: 20em;
-    height: 4.1em;
+    width: 18em;
+    height: 3.1em;
     outline: none;
     transition: 0.1s;
     background-color: transparent;
     border: none;
     font-size: 10px;
     font-weight: lighter;
-    text-align-last: right;
     color: #ddebf0;
+    text-align: center;
+    text-justify: auto;
 }
 
 #clip {
     --color: #2761c3;
     position: absolute;
-    top: 0;
+    top: 10px;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 90%;
     border: 5px double var(--color);
     box-shadow: inset 0 0 15px #195480;
     -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
@@ -29,7 +30,7 @@
     transition: 0.2s;
     background-color: #2761c3;
     /*top: 35%;*/
-    top: 45%;
+    top: 75%;
     width: 11%;
     height: 40%;
 }
@@ -40,19 +41,19 @@
 }
 
 #rightArrow {
-    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
-    left: 119%;
+    -webkit-clip-path: polygon(100% 39%, 0 0, 0 100%);
+    left: 97%;
 }
 
 button:hover #rightArrow {
     background-color: #27c39f;
-    left: -10%;
+    left: -12%;
     animation: 0.6s ease-in-out both infinite alternate rightArrow8;
 }
 
 button:hover #leftArrow {
     background-color: #27c39f;
-    left: 119%;
+    left: 99%;
     animation: 0.6s ease-in-out both infinite alternate leftArrow8;
 }
 
@@ -61,33 +62,33 @@ button:hover #leftArrow {
     width: 4em;
     height: 4em;
     background-color: #2761c3;
-    box-shadow: inset 1px 1px 8px #2781c3;
-    transform: scale(1.2) rotate(45deg);
+    transform: scale(1.2) rotate(43deg);
     transition: 0.2s;
+    text-align: center;
 }
 
 #rightTop {
     /*top: -1.98em;*/
-    top: -2.50em;
+    top: -5.50em;
     /*left: 91%;*/
-    left: 87%;
+    left: 37%;
 }
 
 #leftTop {
-    top: -1.96em;
+    top: -5.96em;
     /*left: -3.0em;*/
     left: -2.0em;
 }
 
 #leftBottom {
-    top: 2.10em;
+    top: 6.10em;
     /*left: -2.15em;*/
     left: -2.00em;
 }
 
 #rightBottom {
     /*top: 45%;*/
-    top: 57%;
+    top: 137%;
     /*left: 88%;*/
     left: 88%;
 }
