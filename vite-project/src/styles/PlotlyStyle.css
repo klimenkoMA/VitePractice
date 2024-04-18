@@ -1,0 +1,6 @@
+.plotly-graph {
+    display: flex;
+    position: absolute;
+    right: 5vh;
+    top: 15vh;
+}
