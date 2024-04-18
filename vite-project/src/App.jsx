@@ -5,6 +5,7 @@ import "./styles/ChatBotFormStyle.css";
 import UseAlert from "./practice/JsPractice";
 import ChatBotDialogButton from "./chatbot/buttons/ChatButton";
 import DialogflowChat from "./chatbot/dialogflow/DialogFlowComponent";
+import UseLeftMenu from "./components/LeftMenuComponent";
 import UsePlotly from "./chatbot/tensorflow/plotly/PlotlyGraph";
 
 
@@ -12,7 +13,7 @@ function App() {
 
     return (
         <div>
-            <div>
+            <div className="logo-box">
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo"/>
                 </a>
@@ -25,10 +26,9 @@ function App() {
                     color: "white",
                 }}
             >Vite + React</h3>
-                <UsePlotly/>
-
-                <ChatBotDialogButton/>
-
+            <UsePlotly/>
+            <UseLeftMenu/>
+            {/*<ChatBotDialogButton/>*/}
 
             <div className="read-the-docs">
                 {/*<UseAlert/>*/}

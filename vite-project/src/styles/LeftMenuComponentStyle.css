@@ -1,0 +1,10 @@
+.main-column{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    left: 6vh;
+    top: 20vh;
+}

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import * as tf from '@tensorflow/tfjs';
+import "/src/styles/PlotlyStyle.css";
 import Plotly from 'plotly.js-basic-dist';
 
 const UsePlotly = () => {
@@ -25,13 +26,15 @@ const UsePlotly = () => {
             height: 250,
             paper_bgcolor: 'rgb(80,160,290, 0)',
             plot_bgcolor: 'rgba(64, 224, 208, 1)'
-    };
+        };
 
         Plotly.newPlot('chart', [trace], layout);
     }, [data]);
 
     return (
-        <div id="chart"></div>
+        <div className="plotly-graph">
+            <div id="chart"/>
+        </div>
     );
 };
 
