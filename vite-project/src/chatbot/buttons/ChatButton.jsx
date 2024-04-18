@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ChatBotDialog from '../DialogChatBot';
 import "/src/styles/ChatBotButtonStyle.css";
 
@@ -23,7 +23,7 @@ const ChatBotDialogButton = () => {
                 <span id="rightArrow" className="arrow"/>
                 <span id="leftArrow" className="arrow"/>
             </button>
-            {isOpen && <ChatBotDialog />}
+            {isOpen && <ChatBotDialog/>}
         </div>
     );
 }
