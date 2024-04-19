@@ -26,7 +26,7 @@ function App() {
                     color: "white",
                 }}
             >Vite + React</h3>
-            <UsePlotly/>
+            {/*<UsePlotly/>*/}
             <UseLeftMenu/>
             {/*<ChatBotDialogButton/>*/}
 
