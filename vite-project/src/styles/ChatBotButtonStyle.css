@@ -22,7 +22,7 @@
     width: 80%;
     height: 90%;
     border: 5px double var(--color);
-    box-shadow: inset 0 0 15px #195480;
+    /*box-shadow: inset 0 0 15px #195480;*/
     -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
@@ -30,7 +30,6 @@
     position: absolute;
     transition: 0.2s;
     background-color: #2761c3;
-    /*top: 35%;*/
     top: 75%;
     width: 11%;
     height: 40%;
@@ -69,28 +68,22 @@ button:hover #leftArrow {
 }
 
 #rightTop {
-    /*top: -1.98em;*/
     top: -5.50em;
-    /*left: 91%;*/
     left: 37%;
 }
 
 #leftTop {
     top: -5.96em;
-    /*left: -3.0em;*/
     left: -2.0em;
 }
 
 #leftBottom {
     top: 6.10em;
-    /*left: -2.15em;*/
     left: -2.00em;
 }
 
 #rightBottom {
-    /*top: 45%;*/
     top: 137%;
-    /*left: 88%;*/
     left: 88%;
 }
 
