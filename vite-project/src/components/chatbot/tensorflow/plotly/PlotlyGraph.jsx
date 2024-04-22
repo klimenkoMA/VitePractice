@@ -22,8 +22,8 @@ const UsePlotly = () => {
         };
 
         let layout = {
-            width: 500,
-            height: 450,
+            width: 600,
+            height: 550,
             paper_bgcolor: 'rgb(80,160,290, 0)',
             plot_bgcolor: 'rgba(64, 224, 208, 1)',
             xaxis: {

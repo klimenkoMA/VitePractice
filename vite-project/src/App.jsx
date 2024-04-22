@@ -3,10 +3,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import "./styles/ChatBotFormStyle.css";
 import UseAlert from "./practice/JsPractice";
-import ChatBotDialogButton from "./chatbot/buttons/ChatButton";
-import DialogflowChat from "./chatbot/dialogflow/DialogFlowComponent";
+import ChatBotDialogButton from "./components/chatbot/buttons/ChatButton";
+import DialogflowChat from "./components/chatbot/dialogflow/DialogFlowComponent";
 import UseLeftMenu from "./components/LeftMenuComponent";
-import UsePlotly from "./chatbot/tensorflow/plotly/PlotlyGraph";
+import UsePlotly from "./components/chatbot/tensorflow/plotly/PlotlyGraph";
 
 
 function App() {
