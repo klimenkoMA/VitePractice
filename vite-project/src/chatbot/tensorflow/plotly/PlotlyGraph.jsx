@@ -8,7 +8,7 @@ const UsePlotly = () => {
 
     // Вычисление данных с использованием TensorFlow.js
     useEffect(() => {
-        const x = tf.tensor1d([1, 5, 3, 4, 15]);
+        const x = tf.tensor1d([1, 5, 3, 4, 15, 8, 9]);
         const y = x.square();
         setData(y.arraySync());
     }, []);
@@ -16,7 +16,7 @@ const UsePlotly = () => {
     // Создание графика с использованием Plotly.js
     useEffect(() => {
         const trace = {
-            x: [1, 2, 3, 4, 5],
+            x: [1, 2, 3, 4, 5, 6, 7],
             y: data,
             type: 'scatter',
         };
@@ -27,12 +27,12 @@ const UsePlotly = () => {
             paper_bgcolor: 'rgb(80,160,290, 0)',
             plot_bgcolor: 'rgba(64, 224, 208, 1)',
             xaxis: {
-                tickfont:  {
+                tickfont: {
                     color: 'white'
                 }
             },
             yaxis: {
-                tickfont:  {
+                tickfont: {
                     color: 'white'
                 }
             }
