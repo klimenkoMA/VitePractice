@@ -1,0 +1,16 @@
+.gallery-box {
+    display: flex;
+    position: fixed;
+    left: 23.5%;
+    top: 11.5vh;
+    color: white;
+    border: none;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.gallery-photo {
+    width: 200px;
+    height: 200px;
+    margin: 3vh;
+}

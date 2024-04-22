@@ -1,8 +1,8 @@
 .plotly-graph {
     display: flex;
     position: fixed;
-    left: 32%;
-    top: 15vh;
+    left: 28%;
+    top: 4vh;
     color: white;
     border: none;
 }
