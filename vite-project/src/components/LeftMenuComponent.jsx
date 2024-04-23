@@ -5,6 +5,7 @@ import "/src/styles/LeftMenuComponentStyle.css";
 import ChatBotDialogButton from "./chatbot/buttons/ChatButton";
 import PlotlyGraphButton from "./chatbot/tensorflow/plotly/PlotlyGraphButton";
 import UseEquipmentGalleryButton from "./gallery/EquipmentGalleryButton";
+import UseDocumentsListButton from "./documents/DocumentsButton";
 
 const UseLeftMenu = () => {
 
@@ -13,7 +14,7 @@ const UseLeftMenu = () => {
             <ChatBotDialogButton/>
             <PlotlyGraphButton/>
             <UseEquipmentGalleryButton/>
-            <ChatBotDialogButton/>
+            <UseDocumentsListButton/>
         </div>
     );
 }
