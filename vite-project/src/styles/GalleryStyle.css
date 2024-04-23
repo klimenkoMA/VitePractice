@@ -6,11 +6,11 @@
     color: white;
     border: none;
     flex-wrap: wrap;
-    width: 800px;
+    width: 120vh;
 }
 
 .gallery-photo {
-    width: 200px;
-    height: 200px;
+    width: 33vh;
+    height: 33vh;
     margin: 3vh;
 }
